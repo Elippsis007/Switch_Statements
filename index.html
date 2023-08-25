@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statements</title>
+</head>
+
+<body>
+    <script>
+        var zipCode = "06880";
+        var town;
+
+        function checkZip() {
+            // Switch statement is exceelent structure for testing a number of equivalencies at the same time
+            switch (zipCode) {
+                case "06611":
+                    town = "Trumbull";
+                    break;
+                case "06066":
+                    town = "Vernon";
+                    break;
+                case "06643":
+                    town = "Madison";
+                    break;
+                case "06880":
+                    town = "Westport";
+                    break;
+                default: // Use for when nothing matches with the cases
+                    town = "No Match"
+            }
+            document.getElementById("output").innerHTML = "Town: " + town;
+        }
+    </script>
+    <p id="output"></p>
+    <button onclick="checkZip">Check Town</button>
+</body>
+
+</html>
